@@ -7,13 +7,13 @@ const list = (props) => {
         {props.people.map((eachperson)=>{
             let {id, name, age, image} =eachperson
             return(
-        <HStack mt="2rem" spacing=" 8"key={id}  >
+        <HStack mt="2rem" spacing=" 8"key={id} alignContent="centre" >  
         <Avatar mt="4" src={image} 
             loading="lazy" size="lg"
         />
         <VStack ml="4">
             <Text fontWeight="bold">{name}</Text>
-            <Text>{age}</Text>
+            <Text>{age} years </Text>
         </VStack>
         </HStack>
         )
