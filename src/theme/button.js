@@ -29,8 +29,13 @@ const theme = extendTheme({
         // 4. We can override existing variants
         solid: (props) => ({
           bg: props.colorMode === "dark" ?  "teal.800" :"red.400" ,
+          _hover: props.colorMode === "dark" ? {bg:"teal.700"} : {bg:"red.300"},
+          _active: props.colorMode === "dark" ?{bg:"teal.800"} :{bg:"red.400"},
+          _focus: props.colorMode === "dark" ? {outline:"yellow", bg:"teal.800"}:{border:"none", bg:"red.400"}
         }),
       },
+
+
     },
   },
 
